@@ -1,14 +1,18 @@
 #include <SFML/Graphics.hpp>
 #include <optional>
+#include "Batiment.h"
 
 int main()
 {
+
+    Batiment rect();
+
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
 
     // Load a sprite to display
-   /* const sf::Texture texture("cute_image.jpg");
-    sf::Sprite sprite(texture);*/
+    //const sf::Texture texture("cute_image.jpg");
+    //sf::Sprite sprite(texture);
 
     // Start the game loop
     while (window.isOpen())
@@ -25,6 +29,7 @@ int main()
         window.clear();
 
         // Draw the sprite
+        // 
         //window.draw(sprite);
 
         // Update the window
