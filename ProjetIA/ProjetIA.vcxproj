@@ -139,14 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Batiment.cpp" />
     <ClCompile Include="FluxNode.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="scene.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="ProjetIA.cpp" />
     <ClCompile Include="RootNode.cpp" />
     <ClCompile Include="TaskNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Batiment.h" />
     <ClInclude Include="FluxNode.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="RootNode.h" />
     <ClInclude Include="TaskNode.h" />
