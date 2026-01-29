@@ -3,6 +3,7 @@
 class Batiment
 {
 public:
+
     Batiment(float width, float height, float x = 0.f, float y = 0.f);
 
     void setSize(float x, float y);

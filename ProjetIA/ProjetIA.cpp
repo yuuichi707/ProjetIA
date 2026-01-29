@@ -1,8 +1,11 @@
 #include <SFML/Graphics.hpp>
 #include <optional>
+#include "Batiment.h"
 
 int main()
 {
+
+    Batiment rect(1920, 1080, 0, 0);
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
 
