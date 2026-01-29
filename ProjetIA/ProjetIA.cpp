@@ -5,8 +5,10 @@
 int main()
 {
 
-    Batiment rect();
+    Batiment rect(1920, 1080, 0, 0);
 
+
+   /* sf::RectangleShape rectangle;*/
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
 
@@ -31,7 +33,9 @@ int main()
         // Draw the sprite
         // 
         //window.draw(sprite);
-
+       // window.draw(rectangle);
+        rect.setColor(sf::Color::Blue);
+        rect.draw(window);
         // Update the window
         window.display();
     }

@@ -1,6 +1,5 @@
 #include "Batiment.h"
 
-
 // define a 120x50 rectangle
 
 Batiment::Batiment(float width, float height, float x, float y)
@@ -18,7 +17,7 @@ void Batiment::setPosition(float x, float y)
     rectangle.setPosition({x, y});
 }
 
-void Batiment::setColor(sf::Color& color)
+void Batiment::setColor(const sf::Color& color)
 {
     rectangle.setFillColor(color);
 }

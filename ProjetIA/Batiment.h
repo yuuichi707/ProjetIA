@@ -8,12 +8,10 @@ public:
 
 	void setSize(float x, float y);
     void setPosition(float x, float y);
-	void setColor(sf::Color& color);
+	void setColor(const sf::Color& color);
 
 	void draw(sf::RenderWindow& window);
 
 	sf::RectangleShape rectangle;
-
-
 };
 
