@@ -1,11 +1,9 @@
 #pragma once
 #include "Scene.h"
+#include "Bouton.h"
 
 
-
-class Menu : public Scene
+class Menu : public Bouton
 {
-	void update(float dt) override;
-	void render(sf::RenderWindow* render) override;
+	void OnClick() override;
 };
-
