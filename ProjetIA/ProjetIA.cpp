@@ -1,16 +1,22 @@
 #include <SFML/Graphics.hpp>
 #include <optional>
-#include "Batiment.h"
+#include "Batiment1.h"
+#include "Batiment2.h"
+#include "Batiment3.h"
+#include "Batiment4.h"
 
 int main()
 {
 
-    Batiment rect(1920, 1080, 0, 0);
-
+    Batiment1 rect(1920, 1080, 0, 0);
+    Batiment2 rect2(1920, 1080, 1920-900, 0);
+    Batiment3 rect3(1920, 1080, 0, 900-300);
+    Batiment4 rect4(1920, 1080, 1920-900, 900-300);
+   
 
    /* sf::RectangleShape rectangle;*/
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode({ 800, 600 }), "SFML window");
+    sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "SFML window");
 
     // Load a sprite to display
     //const sf::Texture texture("cute_image.jpg");
@@ -34,8 +40,14 @@ int main()
         // 
         //window.draw(sprite);
        // window.draw(rectangle);
-        rect.setColor(sf::Color::Blue);
+        rect.setColor(sf::Color::Red);
+        rect2.setColor(sf::Color::Red);
+        rect3.setColor(sf::Color::Red);
+        rect4.setColor(sf::Color::Red);
         rect.draw(window);
+        rect2.draw(window);
+        rect3.draw(window);
+        rect4.draw(window);
         // Update the window
         window.display();
     }

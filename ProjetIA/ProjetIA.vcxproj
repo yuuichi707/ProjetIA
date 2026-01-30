@@ -139,12 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Batiment.cpp" />
+    <ClCompile Include="Batiment1.cpp" />
+    <ClCompile Include="Batiment2.cpp" />
+    <ClCompile Include="Batiment3.cpp" />
+    <ClCompile Include="Batiment4.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="ProjetIA.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Batiment.h" />
+    <ClInclude Include="Batiment1.h" />
+    <ClInclude Include="Batiment2.h" />
+    <ClInclude Include="Batiment3.h" />
+    <ClInclude Include="Batiment4.h" />
     <ClInclude Include="Character.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
