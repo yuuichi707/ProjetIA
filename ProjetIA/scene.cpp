@@ -7,9 +7,6 @@ Scene::~Scene() {
 
 }
 
-void Scene::update(float dt){
-}
+void Scene::update(float dt) {
 
-void Scene::render(sf::RenderWindow* render){
 }
-

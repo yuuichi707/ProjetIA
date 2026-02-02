@@ -29,18 +29,20 @@ void Bouton::draw(sf::RenderWindow& window)
     window.draw(_bouton);
 }
 
-void Bouton::DetectOnClick(const sf::Event::MouseButtonPressed* currentInputMouse)
+bool Bouton::DetectOnClick(const sf::Event::MouseButtonPressed* currentInputMouse)
 {
+    bool HasClick = false;
     if (currentInputMouse != nullptr) {
         sf::Vector2f CursorPosition = sf::Vector2f(currentInputMouse->position);
         if (CursorPosition.x > GetPosition().x && CursorPosition.y > GetPosition().y && CursorPosition.x < GetBoutonExtent().x && CursorPosition.y < GetBoutonExtent().y)
         {
-            OnClick();
+            HasClick = true;
         }
     }
+    return HasClick;
 }
 
-void Bouton::OnClick()
+void Bouton::OnClick(Params* _params)
 {
 
 }

@@ -1,19 +1,23 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Play.h"
 
-enum SceneState 
+enum SceneState
 {
 	Menu,
-	Pause,
-	Quit,
+	Play,
+	Game,
 };
 
-class Scene
+class Scene : public Play
 {
 public:
 
 	float WindowHeight;
 	float WindowWidth;
+
+	float currentScene;
+	float PreviousScene;
 
 	SceneState CurrentState;
 	SceneState PreviousState;
@@ -23,7 +27,5 @@ public:
 	Scene(sf::RenderWindow* _render, float _WindowHeight, int _WindowWidth);
 	virtual ~Scene();
 
-	virtual void update(float dt);
-	virtual void render(sf::RenderWindow* render);
+	void update(float dt);
 };
-
