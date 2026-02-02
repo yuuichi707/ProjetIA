@@ -426,3 +426,18 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+/.vs
+x64/
+
+# CLion project files
+.idea
+cmake-build-*
+
+# Mac files
+**/.DS_Store
+__MACOSX/
+.AppleDouble
+.LSOverride
+Icon[]
+CMakeLists.txt
