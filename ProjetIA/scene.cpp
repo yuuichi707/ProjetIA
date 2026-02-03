@@ -8,9 +8,14 @@ Scene::~Scene() {
 }
 
 void Scene::update(float dt) {
-	switch (Menu) {
+	switch (Menu) 
+	{
 		case PLAY:
-			
+			if () {
+
+			}
+
+
 	}
 
 }
