@@ -21,23 +21,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Character.cpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
     <ClCompile Include="ProjetIA.cpp">
       <Filter>Fichiers d%27en-tête</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment1.cpp">
-      <Filter>Fichiers sources\Batiment.cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment2.cpp">
-      <Filter>Fichiers sources\Batiment.cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment3.cpp">
-      <Filter>Fichiers sources\Batiment.cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment4.cpp">
-      <Filter>Fichiers sources\Batiment.cpp</Filter>
     </ClCompile>
     <ClCompile Include="Node.cpp">
       <Filter>Fichiers sources</Filter>
@@ -67,6 +52,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Boulangerie.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,22 +89,8 @@
     <ClInclude Include="Scene.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Character.h">
+    <ClInclude Include="Boulangerie.h">
       <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment1.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment2.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment4.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment3.h">
-      <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

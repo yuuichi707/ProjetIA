@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Boulangerie.cpp" />
     <ClCompile Include="Bouton.cpp" />
     <ClCompile Include="FluxNode.cpp" />
     <ClCompile Include="input.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="TaskNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Boulangerie.h" />
     <ClInclude Include="Bouton.h" />
     <ClInclude Include="FluxNode.h" />
     <ClInclude Include="input.h" />
