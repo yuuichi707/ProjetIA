@@ -5,13 +5,15 @@
 enum SceneState
 {
 	Menu,
-	Play,
-	Game,
+	PLAY,
+	Pause
 };
 
 class Scene : public Play
 {
 public:
+
+	Scene() = default;
 
 	float WindowHeight;
 	float WindowWidth;

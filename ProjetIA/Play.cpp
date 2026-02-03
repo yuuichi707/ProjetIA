@@ -10,6 +10,6 @@ Play::Play(float width, float height, float x, float y)
 void Play::OnClick(Params* _params)
 {
 	PlayParams* CastedParams = static_cast<PlayParams*>(_params);
-	CastedParams->InternWindow->();
+	CastedParams->InternWindow->display();
 	std::cout << "Play";
 }

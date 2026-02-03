@@ -8,5 +8,8 @@ Scene::~Scene() {
 }
 
 void Scene::update(float dt) {
+	switch (Menu) {
+		case PLAY:
+	}
 
 }
