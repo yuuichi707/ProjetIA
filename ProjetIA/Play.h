@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Bouton.h"
-#include "Scene.h"
+
 
 class PlayParams : public Params {
 public:

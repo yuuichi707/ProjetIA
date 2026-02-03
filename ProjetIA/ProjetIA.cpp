@@ -4,11 +4,11 @@
 #include "Bouton.h"
 #include "Play.h"
 #include "Quit.h"
-#include <iostream>
 #include "Batiment1.h"
 #include "Batiment2.h"
 #include "Batiment3.h"
 #include "Batiment4.h"
+#include "Scene.h"
 
 int main()
 {
@@ -29,7 +29,6 @@ int main()
     // Load a sprite to display
     //const sf::Texture texture("cute_image.jpg");
     //sf::Sprite sprite(texture);
-    sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "SFML window");
 
      Scene TestScene;
     
@@ -46,15 +45,15 @@ int main()
             const sf::Event::KeyPressed* currentInputKey = event->getIf<sf::Event::KeyPressed>();
             const sf::Event::MouseButtonPressed* currentInputMouse = event->getIf<sf::Event::MouseButtonPressed>();
 
-            bool Playclick = rect1->DetectOnClick(currentInputMouse);
-            bool Quitclick = rect2->DetectOnClick(currentInputMouse);
+            bool Playclick = Rect1->DetectOnClick(currentInputMouse);
+            bool Quitclick = Rect2->DetectOnClick(currentInputMouse);
             if (Playclick)
             {
-                rect1->OnClick(nullptr);
+                Rect1->OnClick(nullptr);
             }
             if (Quitclick)
             {
-                rect2->OnClick(new QuitParams(&window));
+                Rect2->OnClick(new QuitParams(&window));
 
             }
         }
