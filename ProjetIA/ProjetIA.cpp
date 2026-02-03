@@ -4,6 +4,8 @@
 #include "Batiment2.h"
 #include "Batiment3.h"
 #include "Batiment4.h"
+#include "Character.h"
+
 
 int main()
 {
@@ -12,8 +14,10 @@ int main()
     Batiment2 rect2(1920, 1080, 1920-900, 0);
     Batiment3 rect3(1920, 1080, 0, 900-300);
     Batiment4 rect4(1920, 1080, 1920-900, 900-300);
-   
+    Character rect5(1000, 1000, 0, 0);
 
+
+    //const sf::Texture texture("eren.png");
    /* sf::RectangleShape rectangle;*/
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "SFML window");
@@ -48,6 +52,7 @@ int main()
         rect2.draw(window);
         rect3.draw(window);
         rect4.draw(window);
+        rect5.draw(window);
         // Update the window
         window.display();
     }

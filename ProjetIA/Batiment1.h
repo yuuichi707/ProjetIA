@@ -4,7 +4,7 @@
 class Batiment1
 {
 public:
-	Batiment1(float width, float height, float x = 0.f, float y = 0.f);
+	Batiment1(float width, float height, float x, float y);
 
 	void setSize(float x, float y);
     void setPosition(float x, float y);
