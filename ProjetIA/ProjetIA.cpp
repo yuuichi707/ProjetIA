@@ -21,18 +21,10 @@ int main() {
     Bouton* rect7= new Quit(1920, 1080, 1920 / 2 + 200, 1080 / 2);
 
 
-    //const sf::Texture texture("eren.png");
-    /* sf::RectangleShape rectangle;*/
     // Create the main window
     sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "SFML window");
 
     Scene TestScene;
-
-
-
-    // Load a sprite to display
-    //const sf::Texture texture("cute_image.jpg");
-    //sf::Sprite sprite(texture);
 
     // Start the game loop
     while (window.isOpen()) {
@@ -58,7 +50,6 @@ int main() {
 
             }
 
-
             // Clear screen
             window.clear();
 
@@ -81,10 +72,6 @@ int main() {
                 rect4.draw(window);
             }
 
-            // Draw the sprite
-            //
-            //window.draw(sprite);
-            // window.draw(rectangle);
 
             // Update the window
             window.display();
