@@ -32,22 +32,7 @@ protected:
 
 class EnnemiBlackBoard : public Blackboard {
 public:
-	int PlayerX;
-	int PlayerY;
 
-	int MyPosX;
-	int MyPosY;
-
-	int MyDirX;
-	int MyDirY;
-
-	bool SeePlayer;
-
-	int Point1X;
-	int Point1Y;
-
-	int Point2X;
-	int Point2Y;
 };
 
 

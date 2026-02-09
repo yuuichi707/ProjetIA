@@ -61,11 +61,6 @@ void EnnemyBehaviorTree::BuildTree() {
 	Sequence* Sequence1 = new Sequence(this, FallBack1, {});
 	FallBack1->AddChild(Sequence1);
 
-	SeePlayerTask* Task1 = new SeePlayerTask(this, Sequence1);
-	Sequence1->AddChild(Task1);
-
-
-	AllSubNodes.push_back(Task1);
 	AllSubNodes.push_back(Sequence1);
 	AllSubNodes.push_back(FallBack1);
 }
