@@ -13,36 +13,144 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\BehaviorTree">
+      <UniqueIdentifier>{d119d898-8a1c-4364-b0e4-77632970c856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Batiments">
+      <UniqueIdentifier>{db55f4b2-6810-4977-b573-09de135020ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Charactere">
+      <UniqueIdentifier>{802a49eb-9926-4f75-9f20-4d5746284fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Menu">
+      <UniqueIdentifier>{3e17b6e7-7748-4e0e-b633-ef778177226a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BehaviorTree">
+      <UniqueIdentifier>{798976bc-bdfa-4335-a87d-ceee65fe1405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Batiments">
+      <UniqueIdentifier>{27747984-4ba5-42c5-bb30-00c99f426518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Charactere">
+      <UniqueIdentifier>{3a5eb105-594a-4793-9b58-8de32a7ead7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Menu">
+      <UniqueIdentifier>{d1d98de0-044f-4b36-ace8-200ae9b10306}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ProjetIA.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Node.cpp">
+    <ClCompile Include="Input.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree.cpp">
+      <Filter>Fichiers sources\BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="FallBack.cpp">
+      <Filter>Fichiers sources\BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowNode.cpp">
+      <Filter>Fichiers sources\BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Fichiers sources\BehaviorTree</Filter>
     </ClCompile>
     <ClCompile Include="RootNode.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="FluxNode.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\BehaviorTree</Filter>
     </ClCompile>
     <ClCompile Include="TaskNode.cpp">
-      <Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources\BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Batiment1.cpp">
+      <Filter>Fichiers sources\Batiments</Filter>
+    </ClCompile>
+    <ClCompile Include="Batiment2.cpp">
+      <Filter>Fichiers sources\Batiments</Filter>
+    </ClCompile>
+    <ClCompile Include="Batiment3.cpp">
+      <Filter>Fichiers sources\Batiments</Filter>
+    </ClCompile>
+    <ClCompile Include="Batiment4.cpp">
+      <Filter>Fichiers sources\Batiments</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Fichiers sources\Charactere</Filter>
+    </ClCompile>
+    <ClCompile Include="Character2.cpp">
+      <Filter>Fichiers sources\Charactere</Filter>
+    </ClCompile>
+    <ClCompile Include="Bouton.cpp">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Play.cpp">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Quit.cpp">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Fichiers sources\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence.cpp">
+      <Filter>Fichiers sources\BehaviorTree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Node.h">
+    <ClInclude Include="Input.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="FallBack.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowNode.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
     </ClInclude>
     <ClInclude Include="RootNode.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
     </ClInclude>
-    <ClInclude Include="FluxNode.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Sequence.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
     </ClInclude>
     <ClInclude Include="TaskNode.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment1.h">
+      <Filter>Fichiers d%27en-tête\Batiments</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment2.h">
+      <Filter>Fichiers d%27en-tête\Batiments</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment3.h">
+      <Filter>Fichiers d%27en-tête\Batiments</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment4.h">
+      <Filter>Fichiers d%27en-tête\Batiments</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Fichiers d%27en-tête\Charactere</Filter>
+    </ClInclude>
+    <ClInclude Include="Character2.h">
+      <Filter>Fichiers d%27en-tête\Charactere</Filter>
+    </ClInclude>
+    <ClInclude Include="Bouton.h">
+      <Filter>Fichiers d%27en-tête\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Play.h">
+      <Filter>Fichiers d%27en-tête\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Quit.h">
+      <Filter>Fichiers d%27en-tête\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Fichiers d%27en-tête\Menu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

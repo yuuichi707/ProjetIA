@@ -139,16 +139,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FluxNode.cpp" />
+    <ClCompile Include="Batiment1.cpp" />
+    <ClCompile Include="Batiment2.cpp" />
+    <ClCompile Include="Batiment3.cpp" />
+    <ClCompile Include="Batiment4.cpp" />
+    <ClCompile Include="BehaviorTree.cpp" />
+    <ClCompile Include="Bouton.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Character2.cpp" />
+    <ClCompile Include="FallBack.cpp" />
+    <ClCompile Include="FlowNode.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Play.cpp" />
     <ClCompile Include="ProjetIA.cpp" />
+    <ClCompile Include="Quit.cpp" />
     <ClCompile Include="RootNode.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="TaskNode.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FluxNode.h" />
+    <ClInclude Include="Batiment1.h" />
+    <ClInclude Include="Batiment2.h" />
+    <ClInclude Include="Batiment3.h" />
+    <ClInclude Include="Batiment4.h" />
+    <ClInclude Include="BehaviorTree.h" />
+    <ClInclude Include="Bouton.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="Character2.h" />
+    <ClInclude Include="FallBack.h" />
+    <ClInclude Include="FlowNode.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="Play.h" />
+    <ClInclude Include="Quit.h" />
     <ClInclude Include="RootNode.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Sequence.h" />
     <ClInclude Include="TaskNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
