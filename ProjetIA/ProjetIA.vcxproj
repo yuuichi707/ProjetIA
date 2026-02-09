@@ -138,31 +138,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Bouton.cpp" />
-    <ClCompile Include="FluxNode.cpp" />
-    <ClCompile Include="input.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Play.cpp" />
-    <ClCompile Include="Quit.cpp" />
-    <ClCompile Include="Node.cpp" />
-    <ClCompile Include="ProjetIA.cpp" />
-    <ClCompile Include="RootNode.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="TaskNode.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Bouton.h" />
-    <ClInclude Include="FluxNode.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Play.h" />
-    <ClInclude Include="Quit.h" />
-    <ClInclude Include="Node.h" />
-    <ClInclude Include="RootNode.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="TaskNode.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
