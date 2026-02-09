@@ -6,7 +6,6 @@
 #define PROJETIA_SCENE_H
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Play.h"
 
 enum SceneState
 {
@@ -15,7 +14,7 @@ enum SceneState
     Pause
 };
 
-class Scene : public Play
+class Scene
 {
 public:
 

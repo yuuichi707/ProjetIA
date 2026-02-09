@@ -7,16 +7,17 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Bouton.h"
+#include "Scene.h"
 
 
 class PlayParams : public Params {
 public:
     PlayParams() = default;
-    PlayParams(sf::RenderWindow* Window) {
-        InternWindow = Window;
+    PlayParams(Scene* _Scene) {
+        InternScene = _Scene;
     }
 
-    sf::RenderWindow* InternWindow;
+    Scene* InternScene;
 };
 
 class Play : public Bouton
