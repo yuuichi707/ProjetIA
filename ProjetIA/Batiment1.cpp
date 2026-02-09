@@ -4,7 +4,7 @@
 
 Batiment1::Batiment1(float width, float height, float x, float y)
 {
-    rectangle = sf::RectangleShape({ 900.f, 420.f });
+    rectangle = sf::RectangleShape({ 700.f, 350.f });
     setPosition(x, y);
 
 }
