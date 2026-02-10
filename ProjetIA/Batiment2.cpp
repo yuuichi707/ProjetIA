@@ -4,10 +4,15 @@
 
 Batiment2::Batiment2(float width, float height, float x, float y)
 {
-    rectangle = sf::RectangleShape({ 700.f, 350.f });
+    rectangle = sf::RectangleShape({ 800.f, 460.f });
+    texture = sf::Texture("asset/Boulangerie.png");
+    rectangle.setTexture(&texture);
     setPosition(x, y);
 }
-
+void Batiment2::setTextureRect(float x, float y)
+{
+    rectangle.setTextureRect({{10, 10}, {50, 30}});
+}
 void Batiment2::setSize(float x, float y)
 {
     rectangle.setSize({ 100.f, 100.f });
@@ -16,11 +21,6 @@ void Batiment2::setSize(float x, float y)
 void Batiment2::setPosition(float x, float y)
 {
     rectangle.setPosition({ x, y });
-}
-
-void Batiment2::setColor(const sf::Color& color)
-{
-    rectangle.setFillColor(color);
 }
 
 void Batiment2::draw(sf::RenderWindow& window)

@@ -3,14 +3,16 @@
 
 class Batiment1
 {
+private:
+	sf::Texture texture;
 public:
-	Batiment1(float width, float height, float x, float y);
+	Batiment1(float width, float height, float x = 0.f, float y = 0.f);
 
+	void setTextureRect(float x, float y);
 	void setSize(float x, float y);
-    void setPosition(float x, float y);
-	void setColor(const sf::Color& color);
+	void setPosition(float x, float y);
 
-	void draw(sf::RenderWindow& window);
+	void draw(sf::RenderWindow & window);
 
 	sf::RectangleShape rectangle;
 };

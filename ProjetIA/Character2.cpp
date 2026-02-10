@@ -18,7 +18,8 @@ void Character2::setTextureRect(float x, float y)
 
 void Character2::setPosition(float x, float y)
 {
-    rectangle.setPosition({100.f, 25.f});
+    //entre 415 et 400
+    rectangle.setPosition({300, 415});
 }
 
 void Character2::draw(sf::RenderWindow& window)
