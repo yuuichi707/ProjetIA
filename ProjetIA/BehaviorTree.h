@@ -30,17 +30,22 @@ protected:
 };
 
 
-class EnnemiBlackBoard : public Blackboard {
+class NPCBlackBoard : public Blackboard {
 public:
+	float NPCx;
+	float NPCy;
+
+	float MarchantX;
+	float MarchantY;
 
 };
 
 
-class EnnemyBehaviorTree : public BehaviorTree {
+class NPCBehaviorTree : public BehaviorTree {
 public:
-	EnnemyBehaviorTree();
-	EnnemyBehaviorTree(Blackboard* BB);
-	virtual ~EnnemyBehaviorTree();
+	NPCBehaviorTree();
+	NPCBehaviorTree(Blackboard* BB);
+	virtual ~NPCBehaviorTree();
 
 	virtual void BuildTree() override;
 };

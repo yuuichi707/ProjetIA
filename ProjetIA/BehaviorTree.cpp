@@ -2,7 +2,6 @@
 
 #include "FallBack.h"
 #include "Node.h"
-#include "SeePlayerTask.h"
 #include "Sequence.h"
 
 BehaviorTree::BehaviorTree() : BehaviorTree(nullptr) {
@@ -43,16 +42,16 @@ Blackboard* BehaviorTree::GetBlackBoard()
 	return InternBlackBoard;
 }
 
-EnnemyBehaviorTree::EnnemyBehaviorTree() : EnnemyBehaviorTree(nullptr) {
+NPCBehaviorTree::NPCBehaviorTree() : NPCBehaviorTree(nullptr) {
 }
 
-EnnemyBehaviorTree::EnnemyBehaviorTree(Blackboard* BB) : BehaviorTree(BB) {
+NPCBehaviorTree::NPCBehaviorTree(Blackboard* BB) : BehaviorTree(BB) {
 }
 
-EnnemyBehaviorTree::~EnnemyBehaviorTree() {
+NPCBehaviorTree::~NPCBehaviorTree() {
 }
 
-void EnnemyBehaviorTree::BuildTree() {
+void NPCBehaviorTree::BuildTree() {
 	BehaviorTree::BuildTree();
 
 	FallBack* FallBack1 = new FallBack(this, nullptr, {});

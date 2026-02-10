@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-class Character
+#include "NPC.h"
+class Character : public NPC
 {
 private:
     sf::Texture texture;

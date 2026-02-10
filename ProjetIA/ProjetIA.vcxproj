@@ -151,10 +151,11 @@
     <ClCompile Include="FlowNode.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPCMooveTo.cpp" />
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="ProjetIA.cpp" />
     <ClCompile Include="Quit.cpp" />
-    <ClCompile Include="RootNode.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="TaskNode.cpp" />
@@ -172,9 +173,10 @@
     <ClInclude Include="FlowNode.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="NPCMooveTo.h" />
     <ClInclude Include="Play.h" />
     <ClInclude Include="Quit.h" />
-    <ClInclude Include="RootNode.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="TaskNode.h" />
