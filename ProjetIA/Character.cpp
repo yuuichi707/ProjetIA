@@ -9,7 +9,7 @@ Character::Character(float width, float height, float x, float y)
 
 void Character::setTextureRect(float x, float y)
 {
-    rectangle.setTextureRect({{10, 10}, {50, 30}});
+    rectangle.setTextureRect({{0, 0}, {50, 30}});
 }
 
 void Character::setPosition(float x, float y)

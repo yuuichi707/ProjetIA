@@ -15,13 +15,13 @@
 
 
 int main() {
- Batiment1 rect7(1440, 900, -30, 370);
+ Batiment1 rect(1440, 900, -30, 370);
  Batiment2 rect2(1440, 900, -62, -25);
  Batiment3 rect3(1440, 900, 795, -20);
  Batiment4 rect4(1440, 900, 755, 420);
- Character rect5(200, 300, 0, 0);
- Character2 rect6(500, 450, 300, 0);
- Way rect(1440, 900, -30, 200);
+ Character rect5(1440, 900, 400, 300);
+ //Character2 rect6(500, 450, 300, 0);
+ //Way rect(1440, 900, -30, 200);
      // Bouton* Rect1 = new Play(1440, 900, 1440 / 2, 900 / 2);
      // Bouton* Rect2= new Quit(1440, 900, 1440 / 2 + 200, 900 / 2);
 
@@ -64,13 +64,13 @@ int main() {
                   // if (TestScene->currentScene == PLAY) {
 
 
-     rect7.draw(window);
+     rect.draw(window);
      rect2.draw(window);
      rect3.draw(window);
      rect4.draw(window);
      rect5.draw(window);
-     rect6.draw(window);
-     rect.draw(window);
+     //rect6.draw(window);
+     //rect.draw(window);
 
              // }
 
