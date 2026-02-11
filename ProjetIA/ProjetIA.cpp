@@ -18,8 +18,8 @@ int main() {
     Batiment2 rect2(1440, 1300, 0, 0);
     Batiment3 rect3(1440, 900, 800, 0);
     Batiment4 rect4(1440, 900, 800,500);
-    Character rect5(1000, 1000, 0, 0);
-    Character2 rect6(1000, 1000, 0, 0);
+    Character rect5(1440, 900, 400, 300);
+   /* Character2 rect6(1000, 1000, 0, 0);*/
     //Bouton* Rect1 = new Play(1440, 900, 1440 / 2, 900 / 2);
     //Bouton* Rect2 = new Quit(1440, 900, 1440 / 2 + 200, 900 / 2);
     
@@ -70,6 +70,7 @@ int main() {
             rect2.draw(window);
             rect3.draw(window);
             rect4.draw(window);
+            rect5.draw(window);
         /*}*/
         // Update the window
         window.display();

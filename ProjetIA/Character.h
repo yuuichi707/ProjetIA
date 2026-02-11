@@ -10,8 +10,9 @@ public:
 
     void setTextureRect(float x, float y);
     void setPosition(float x, float y);
-
+    
     void draw(sf::RenderWindow& window);
 
     sf::RectangleShape rectangle;
+
 };

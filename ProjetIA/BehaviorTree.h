@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "Character.h"
 
 class RootNode;
 class BaseNode;
@@ -38,6 +39,8 @@ public:
 	float MarchantX;
 	float MarchantY;
 
+	Character* _character;
+	/*std::vector<*/
 };
 
 

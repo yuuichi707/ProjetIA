@@ -1,8 +1,9 @@
 #pragma once
+#include <SFML/System/Vector2.hpp>
 #include "TaskNode.h"
 #include "BehaviorTree.h"
-#include "Node.h"
 #include "NPC.h"
+#include "Character.h"
 
 class NPCMooveTo : public TaskNode
 {
@@ -14,16 +15,24 @@ public:
 	virtual void BeginExecute() override;
 	virtual void Tick(float DeltaTime) override;
 	virtual void EndExecute() override;
+	bool Arrived;
+
+	template<class T>
+	bool NearlyEqual(const T& A, const T& B, const T& Tolerance) {
+		return std::abs(A - B) < Tolerance;
+	}
 
 private:
-	float NPCDirX;
-	float NPCDirY;
+	sf::Vector2f Target;
+	sf::Vector2f PosPNJ;
 
 	float NPCTargetX;
 	float NPCTargetY;
 
-	NPC* _NPC;
+	Character* _character;
 
+	
 	float DotProductResult;
+	float Speed = 200;
 };
 

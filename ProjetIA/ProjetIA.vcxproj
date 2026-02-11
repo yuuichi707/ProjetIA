@@ -152,6 +152,7 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPCBuy.cpp" />
     <ClCompile Include="NPCMooveTo.cpp" />
     <ClCompile Include="Play.cpp" />
     <ClCompile Include="ProjetIA.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="NPC.h" />
+    <ClInclude Include="NPCBuy.h" />
     <ClInclude Include="NPCMooveTo.h" />
     <ClInclude Include="Play.h" />
     <ClInclude Include="Quit.h" />
