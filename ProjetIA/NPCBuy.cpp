@@ -24,6 +24,8 @@ void NPCBuy::BeginExecute()
 }
 
 void NPCBuy::Tick(float DeltaTime) {
+	TaskNode::Tick(DeltaTime);
+
 	TimeSpent += DeltaTime;
 
 	if (TimeSpent > 5.0f)

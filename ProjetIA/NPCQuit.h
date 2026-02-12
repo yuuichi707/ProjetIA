@@ -23,12 +23,8 @@ private:
 	sf::Vector2f Target;
 	sf::Vector2f PosPNJ;
 
-	float NPCTargetX;
-	float NPCTargetY;
-
 	Character* _character;
 
-	float DotProductResult;
 	float Speed = 500;
 };
 
