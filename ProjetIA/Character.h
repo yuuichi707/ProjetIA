@@ -1,11 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "NPC.h"
-class Character : public NPC
+
+class Character 
 {
 private:
     sf::Texture texture;
+    sf::Color color;
 public:
+    Character() = default;
     Character(float width, float height, float x, float y);
 
     void setTextureRect(float x, float y);
@@ -13,6 +15,7 @@ public:
     
     void draw(sf::RenderWindow& window);
 
-    sf::RectangleShape rectangle;
 
+public:
+    sf::RectangleShape rectangle;
 };

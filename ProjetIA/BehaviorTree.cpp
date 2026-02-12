@@ -3,6 +3,9 @@
 #include "FallBack.h"
 #include "Node.h"
 #include "Sequence.h"
+#include "NPCMooveTo.h"
+#include "NPCBuy.h"
+#include "NPCQuit.h"
 
 BehaviorTree::BehaviorTree() : BehaviorTree(nullptr) {
 
@@ -60,6 +63,25 @@ void NPCBehaviorTree::BuildTree() {
 	Sequence* Sequence1 = new Sequence(this, FallBack1, {});
 	FallBack1->AddChild(Sequence1);
 
+	NPCMooveTo* Task1 = new NPCMooveTo(this, Sequence1);
+	Sequence1->AddChild(Task1);
+	NPCBuy* Task2 = new NPCBuy(this, Sequence1);
+	Sequence1->AddChild(Task2);
+	NPCQuit* Task3 = new NPCQuit(this, Sequence1);
+	Sequence1->AddChild(Task3);
+
 	AllSubNodes.push_back(Sequence1);
 	AllSubNodes.push_back(FallBack1);
+	AllSubNodes.push_back(Task1);
+	AllSubNodes.push_back(Task2);
+	AllSubNodes.push_back(Task3);
+
+
+}
+
+
+
+
+NPCBlackBoard::NPCBlackBoard(Character* pnj) {
+	_character = pnj;
 }

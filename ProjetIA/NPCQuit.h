@@ -4,12 +4,11 @@
 #include "BehaviorTree.h"
 #include "Character.h"
 
-class NPCMooveTo : public TaskNode
+class NPCQuit : public TaskNode
 {
 public:
-	NPCMooveTo();
-	NPCMooveTo(NPCBehaviorTree* Tree, FlowNode* NodeParent);
-	virtual ~NPCMooveTo() override;
+	NPCQuit();
+	NPCQuit(BehaviorTree* Tree, FlowNode* NodeParent);
 
 	virtual void BeginExecute() override;
 	virtual void Tick(float DeltaTime) override;
@@ -29,7 +28,6 @@ private:
 
 	Character* _character;
 
-	
 	float DotProductResult;
 	float Speed = 500;
 };

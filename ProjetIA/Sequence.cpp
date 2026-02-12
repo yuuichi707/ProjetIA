@@ -13,7 +13,7 @@ void Sequence::OnChildEnd(ENodeState ChildResult) {
 	if (ChildResult == ENodeState::Success) {
 		FlowNode::OnChildEnd(ChildResult);
 		if (CurrentExecuteChild != nullptr) {
-
+			CurrentExecuteChild->BeginExecute();
 		}
 		else {
 			if (Parent != nullptr) {

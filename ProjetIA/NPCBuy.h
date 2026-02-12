@@ -3,7 +3,7 @@
 #include "BehaviorTree.h"
 #include "TaskNode.h"
 
-class NPCBuy : public FlowNode
+class NPCBuy : public TaskNode
 {
 public:
 	NPCBuy();
@@ -13,5 +13,9 @@ public:
 	virtual void BeginExecute() override;
 	virtual void Tick(float DeltaTime) override;
 	virtual void EndExecute() override;
+
+public:
+
+	float TimeSpent;
 };
 

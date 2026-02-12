@@ -37,6 +37,12 @@
     <Filter Include="Fichiers sources\Menu">
       <UniqueIdentifier>{d1d98de0-044f-4b36-ace8-200ae9b10306}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree">
+      <UniqueIdentifier>{8d004a23-f748-4018-a976-81f6f5b1599f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\BehaviorTree\NPC Behavior Tree">
+      <UniqueIdentifier>{18dd5172-b451-403f-be1d-b6eb2c4f420e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ProjetIA.cpp">
@@ -93,13 +99,16 @@
     <ClCompile Include="Sequence.cpp">
       <Filter>Fichiers sources\BehaviorTree</Filter>
     </ClCompile>
-    <ClCompile Include="NPCMooveTo.cpp">
+    <ClCompile Include="Clock.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="NPC.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="NPCMooveTo.cpp">
+      <Filter>Fichiers sources\BehaviorTree\NPC Behavior Tree</Filter>
     </ClCompile>
     <ClCompile Include="NPCBuy.cpp">
+      <Filter>Fichiers sources\BehaviorTree\NPC Behavior Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCQuit.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -155,13 +164,16 @@
     <ClInclude Include="Scene.h">
       <Filter>Fichiers d%27en-tête\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="NPCMooveTo.h">
+    <ClInclude Include="Clock.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="NPC.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="NPCMooveTo.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree</Filter>
     </ClInclude>
     <ClInclude Include="NPCBuy.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCQuit.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

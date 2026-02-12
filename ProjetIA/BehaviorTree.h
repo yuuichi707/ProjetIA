@@ -33,6 +33,9 @@ protected:
 
 class NPCBlackBoard : public Blackboard {
 public:
+	NPCBlackBoard() = default;
+	NPCBlackBoard(Character* pnj);
+
 	float NPCx;
 	float NPCy;
 

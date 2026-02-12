@@ -1,39 +1,41 @@
-#include "NPCMooveTo.h"
+#include "NPCQuit.h"
 #include "FlowNode.h"
+#include "TaskNode.h"
+#include <iostream>
 
-NPCMooveTo::NPCMooveTo()
+NPCQuit::NPCQuit() 
+	: NPCQuit(nullptr, nullptr)
 {
+
 }
 
-NPCMooveTo::NPCMooveTo(NPCBehaviorTree* Tree, FlowNode* NodeParent)
+NPCQuit::NPCQuit(BehaviorTree* Tree, FlowNode* NodeParent) 
 	: TaskNode(Tree, NodeParent)
 {
 
 }
 
-NPCMooveTo::~NPCMooveTo()
-{
-}
-
-void NPCMooveTo::BeginExecute()
+void NPCQuit::BeginExecute()
 {
 	NPCBlackBoard* _BlackBoard = static_cast<NPCBlackBoard*>(GetBlackBoard());
+	std::cout << "hello";
 	if (_BlackBoard != nullptr) {
-		
-		//Position
-		Target = { 470, 260 };
 
-		//Character*
 		_character = _BlackBoard->_character;
 		PosPNJ = _character->rectangle.getPosition();
+
+		//Position
+		Target = { 1440, 450 };
+
+		//Character*
 
 	}
 }
 
-void NPCMooveTo::Tick(float DeltaTime)
+void NPCQuit::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
-	
+
 	//getposition -> vector2f
 	//add speed sur x et y 
 
@@ -44,7 +46,6 @@ void NPCMooveTo::Tick(float DeltaTime)
 		PosPNJ.y += Speed * DeltaTime;
 	}
 
-	_character->rectangle.setPosition(PosPNJ);
 	//il faut vérifier si on est au dela de l'objectif
 	//si oui alors
 	if (NearlyEqual(PosPNJ.x, Target.x, 10.0f) && NearlyEqual(PosPNJ.y, Target.y, 10.0f))
@@ -57,10 +58,10 @@ void NPCMooveTo::Tick(float DeltaTime)
 	}
 }
 
-void NPCMooveTo::EndExecute()
+void NPCQuit::EndExecute()
 {
 	Parent->OnChildEnd(ENodeState::Success);
-
 }
+
 
 
