@@ -51,7 +51,7 @@ void NPCMooveTo::Tick(float DeltaTime)
 	//il faut vérifier si on est au dela de l'objectif
 	//si oui alors
 	
-	if (NearlyEqual(PosPNJ.x, Target2.x, 5.0f) && NearlyEqual(PosPNJ.y, Target2.y, 5.0f)) 
+	if (NearlyEqual(PosPNJ.x, Target1.x, 5.0f) && NearlyEqual(PosPNJ.y, Target1.y, 5.0f)) 
 	{
 		EndExecute();
 	}
