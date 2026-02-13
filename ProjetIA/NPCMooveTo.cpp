@@ -8,7 +8,7 @@ NPCMooveTo::NPCMooveTo()
 NPCMooveTo::NPCMooveTo(NPCBehaviorTree* Tree, FlowNode* NodeParent)
 	: TaskNode(Tree, NodeParent)
 {
-
+	TargetUn = false;
 }
 
 NPCMooveTo::~NPCMooveTo()
@@ -34,33 +34,33 @@ void NPCMooveTo::BeginExecute()
 void NPCMooveTo::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
-	
-	//getposition -> vector2f
-	//add speed sur x et y 
 
 	if (PosPNJ.x < Target1.x) {
 		PosPNJ.x += Speed * DeltaTime;
 	}
-	if (PosPNJ.y < Target1.y) {
-		PosPNJ.y += Speed * DeltaTime;
+	else if (PosPNJ.y > Target1.y) {
+		PosPNJ.y -= Speed * DeltaTime;
+	}
+	if (PosPNJ.x == Target1.x && PosPNJ.y == Target1.y)
+	{
+		TargetUn = true;			
 	}
 
-
+	if (TargetUn) {
+		if (PosPNJ.x < Target2.x) {
+			PosPNJ.x += Speed * DeltaTime;
+		}
+		else if (PosPNJ.y < Target2.y) {
+			PosPNJ.y += Speed * DeltaTime;
+		}
+	}
 
 	_character->rectangle.setPosition(PosPNJ);
-	//il faut vérifier si on est au dela de l'objectif
-	//si oui alors
 	
-	if (NearlyEqual(PosPNJ.x, Target1.x, 5.0f) && NearlyEqual(PosPNJ.y, Target1.y, 5.0f)) 
+	if (NearlyEqual(PosPNJ.x, Target2.x, 5.0f) && NearlyEqual(PosPNJ.y, Target2.y, 5.0f)) 
 	{
 		EndExecute();
 	}
-	
-	else if (PosPNJ.x > Target1.x && PosPNJ.y > Target1.y) {
-		PosPNJ.x += -Speed * DeltaTime;
-		PosPNJ.y += -Speed * DeltaTime;
-	}
-	
 }
 
 void NPCMooveTo::EndExecute()
@@ -68,5 +68,3 @@ void NPCMooveTo::EndExecute()
 	Parent->OnChildEnd(ENodeState::Success);
 
 }
-
-

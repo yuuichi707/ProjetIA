@@ -30,6 +30,7 @@ private:
 
 	Character* _character;
 
+	bool TargetUn;
 	
 	float DotProductResult;
 	float Speed = 500;
