@@ -75,8 +75,6 @@ void NPCBehaviorTree::BuildTree() {
 	AllSubNodes.push_back(Task1);
 	AllSubNodes.push_back(Task2);
 	AllSubNodes.push_back(Task3);
-
-
 }
 
 

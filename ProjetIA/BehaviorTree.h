@@ -36,12 +36,6 @@ public:
 	NPCBlackBoard() = default;
 	NPCBlackBoard(Character* pnj);
 
-	float NPCx;
-	float NPCy;
-
-	float MarchantX;
-	float MarchantY;
-
 	Character* _character;
 	/*std::vector<*/
 };

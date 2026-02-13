@@ -25,9 +25,7 @@ void NPCQuit::BeginExecute()
 		PosPNJ = _character->rectangle.getPosition();
 
 		//Position
-		Target = { 1430, 450 };
-
-		//Character*
+		Target = { 1430, 350 };
 
 	}
 }
@@ -36,8 +34,6 @@ void NPCQuit::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
 
-	//getposition -> vector2f
-	//add speed sur x et y 
 
 	if (PosPNJ.x < Target.x) {
 		PosPNJ.x += Speed * DeltaTime;
@@ -47,8 +43,8 @@ void NPCQuit::Tick(float DeltaTime)
 	}
 
 	_character->rectangle.setPosition(PosPNJ);
-	//il faut vérifier si on est au dela de l'objectif
-	//si oui alors
+
+
 	if (NearlyEqual(PosPNJ.x, Target.x, 10.0f) && NearlyEqual(PosPNJ.y, Target.y, 10.0f))
 	{
 		EndExecute();

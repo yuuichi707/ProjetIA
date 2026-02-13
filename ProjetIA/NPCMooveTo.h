@@ -21,7 +21,8 @@ public:
 	}
 
 private:
-	sf::Vector2f Target;
+	sf::Vector2f Target1;
+	sf::Vector2f Target2;
 	sf::Vector2f PosPNJ;
 
 	float NPCTargetX;

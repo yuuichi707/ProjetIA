@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Batiment1.cpp" />
     <ClCompile Include="Batiment2.cpp" />
     <ClCompile Include="Batiment3.cpp" />
@@ -161,8 +162,11 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="TaskNode.cpp" />
+    <ClCompile Include="Way.cpp" />
+    <ClCompile Include="Waytwo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Batiment1.h" />
     <ClInclude Include="Batiment2.h" />
     <ClInclude Include="Batiment3.h" />
@@ -184,6 +188,8 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="TaskNode.h" />
+    <ClInclude Include="Way.h" />
+    <ClInclude Include="Waytwo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

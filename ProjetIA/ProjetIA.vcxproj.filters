@@ -108,8 +108,17 @@
     <ClCompile Include="NPCBuy.cpp">
       <Filter>Fichiers sources\BehaviorTree\NPC Behavior Tree</Filter>
     </ClCompile>
-    <ClCompile Include="NPCQuit.cpp">
+    <ClCompile Include="Way.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Waytwo.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCQuit.cpp">
+      <Filter>Fichiers sources\BehaviorTree\NPC Behavior Tree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -173,8 +182,17 @@
     <ClInclude Include="NPCBuy.h">
       <Filter>Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree</Filter>
     </ClInclude>
-    <ClInclude Include="NPCQuit.h">
+    <ClInclude Include="Way.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Waytwo.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCQuit.h">
+      <Filter>Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
