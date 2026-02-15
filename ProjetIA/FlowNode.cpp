@@ -19,11 +19,11 @@ void FlowNode::OnChildEnd(ENodeState ChildResult) {
 		else {
 			CurrentExecuteChild = nullptr;
 		}
-
 	}
 }
 
 void FlowNode::BeginExecute() {
+	
 	CurrentExecuteChild = *Childs.begin();
 	if (CurrentExecuteChild != nullptr) {
 		CurrentExecuteChild->BeginExecute();

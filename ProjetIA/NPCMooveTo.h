@@ -21,18 +21,11 @@ public:
 	}
 
 private:
-	sf::Vector2f Target1;
-	sf::Vector2f Target2;
+	sf::Vector2f Target;
 	sf::Vector2f PosPNJ;
-
-	float NPCTargetX;
-	float NPCTargetY;
 
 	Character* _character;
 
-	bool TargetUn;
-	
-	float DotProductResult;
-	float Speed = 500;
+	float Speed = 50000;
 };
 

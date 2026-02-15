@@ -140,10 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
-    <ClCompile Include="Batiment1.cpp" />
-    <ClCompile Include="Batiment2.cpp" />
-    <ClCompile Include="Batiment3.cpp" />
-    <ClCompile Include="Batiment4.cpp" />
+    <ClCompile Include="Batiment.cpp" />
     <ClCompile Include="BehaviorTree.cpp" />
     <ClCompile Include="Bouton.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -167,10 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background.h" />
-    <ClInclude Include="Batiment1.h" />
-    <ClInclude Include="Batiment2.h" />
-    <ClInclude Include="Batiment3.h" />
-    <ClInclude Include="Batiment4.h" />
+    <ClInclude Include="Batiment.h" />
     <ClInclude Include="BehaviorTree.h" />
     <ClInclude Include="Bouton.h" />
     <ClInclude Include="Character.h" />

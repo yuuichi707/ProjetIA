@@ -70,6 +70,7 @@ void NPCBehaviorTree::BuildTree() {
 	NPCQuit* Task3 = new NPCQuit(this, Sequence1);
 	Sequence1->AddChild(Task3);
 
+
 	AllSubNodes.push_back(Sequence1);
 	AllSubNodes.push_back(FallBack1);
 	AllSubNodes.push_back(Task1);

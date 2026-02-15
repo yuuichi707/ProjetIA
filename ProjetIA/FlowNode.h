@@ -19,5 +19,6 @@ public:
 protected:
 	std::vector<Node*> Childs;
 	Node* CurrentExecuteChild;
+
 };
 

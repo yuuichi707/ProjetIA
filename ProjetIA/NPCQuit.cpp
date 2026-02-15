@@ -34,13 +34,15 @@ void NPCQuit::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
 
-
-	if (PosPNJ.x < Target.x) {
-		PosPNJ.x += Speed * DeltaTime;
-	}
+	std::cout << "start to quit";
 	if (PosPNJ.y < Target.y) {
 		PosPNJ.y += Speed * DeltaTime;
 	}
+
+	else if (PosPNJ.x < Target.x) {
+		PosPNJ.x += Speed * DeltaTime;
+	}
+	
 
 	_character->rectangle.setPosition(PosPNJ);
 

@@ -1,4 +1,5 @@
 #include "NPCMooveTo.h"
+#include <iostream>
 #include "FlowNode.h"
 
 NPCMooveTo::NPCMooveTo()
@@ -8,7 +9,7 @@ NPCMooveTo::NPCMooveTo()
 NPCMooveTo::NPCMooveTo(NPCBehaviorTree* Tree, FlowNode* NodeParent)
 	: TaskNode(Tree, NodeParent)
 {
-	TargetUn = false;
+
 }
 
 NPCMooveTo::~NPCMooveTo()
@@ -21,8 +22,7 @@ void NPCMooveTo::BeginExecute()
 	if (_BlackBoard != nullptr) {
 		
 		//Position
-		Target1 = { 470, 260 };
-		Target2 = { 400, 200 };
+		Target = { 410, 220 };
 
 		//Character*
 		_character = _BlackBoard->_character;
@@ -35,30 +35,18 @@ void NPCMooveTo::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
 
-	if (PosPNJ.x < Target1.x) {
+	if (PosPNJ.x < Target.x) {
 		PosPNJ.x += Speed * DeltaTime;
 	}
-	else if (PosPNJ.y > Target1.y) {
+	else if (PosPNJ.y > Target.y) {
 		PosPNJ.y -= Speed * DeltaTime;
-	}
-	if (PosPNJ.x == Target1.x && PosPNJ.y == Target1.y)
-	{
-		TargetUn = true;			
-	}
-
-	if (TargetUn) {
-		if (PosPNJ.x < Target2.x) {
-			PosPNJ.x += Speed * DeltaTime;
-		}
-		else if (PosPNJ.y < Target2.y) {
-			PosPNJ.y += Speed * DeltaTime;
-		}
 	}
 
 	_character->rectangle.setPosition(PosPNJ);
 	
-	if (NearlyEqual(PosPNJ.x, Target2.x, 5.0f) && NearlyEqual(PosPNJ.y, Target2.y, 5.0f)) 
+	if (NearlyEqual(PosPNJ.x, Target.x, 10.0f) && NearlyEqual(PosPNJ.y, Target.y, 10.0f))
 	{
+		std::cout << "gdfgh";
 		EndExecute();
 	}
 }
@@ -66,5 +54,4 @@ void NPCMooveTo::Tick(float DeltaTime)
 void NPCMooveTo::EndExecute()
 {
 	Parent->OnChildEnd(ENodeState::Success);
-
 }

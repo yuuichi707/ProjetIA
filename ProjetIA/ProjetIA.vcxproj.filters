@@ -66,18 +66,6 @@
     <ClCompile Include="TaskNode.cpp">
       <Filter>Fichiers sources\BehaviorTree</Filter>
     </ClCompile>
-    <ClCompile Include="Batiment1.cpp">
-      <Filter>Fichiers sources\Batiments</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment2.cpp">
-      <Filter>Fichiers sources\Batiments</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment3.cpp">
-      <Filter>Fichiers sources\Batiments</Filter>
-    </ClCompile>
-    <ClCompile Include="Batiment4.cpp">
-      <Filter>Fichiers sources\Batiments</Filter>
-    </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>Fichiers sources\Charactere</Filter>
     </ClCompile>
@@ -120,6 +108,9 @@
     <ClCompile Include="NPCQuit.cpp">
       <Filter>Fichiers sources\BehaviorTree\NPC Behavior Tree</Filter>
     </ClCompile>
+    <ClCompile Include="Batiment.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Input.h">
@@ -142,18 +133,6 @@
     </ClInclude>
     <ClInclude Include="TaskNode.h">
       <Filter>Fichiers d%27en-tête\BehaviorTree</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment1.h">
-      <Filter>Fichiers d%27en-tête\Batiments</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment2.h">
-      <Filter>Fichiers d%27en-tête\Batiments</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment3.h">
-      <Filter>Fichiers d%27en-tête\Batiments</Filter>
-    </ClInclude>
-    <ClInclude Include="Batiment4.h">
-      <Filter>Fichiers d%27en-tête\Batiments</Filter>
     </ClInclude>
     <ClInclude Include="Character.h">
       <Filter>Fichiers d%27en-tête\Charactere</Filter>
@@ -193,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="NPCQuit.h">
       <Filter>Fichiers d%27en-tête\BehaviorTree\NPC Behavior Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Batiment.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
