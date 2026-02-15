@@ -159,6 +159,9 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="TaskNode.cpp" />
+    <ClCompile Include="trader.cpp" />
+    <ClCompile Include="traderPay.cpp" />
+    <ClCompile Include="traderSale.cpp" />
     <ClCompile Include="Way.cpp" />
     <ClCompile Include="Waytwo.cpp" />
   </ItemGroup>
@@ -182,6 +185,9 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="TaskNode.h" />
+    <ClInclude Include="trader.h" />
+    <ClInclude Include="traderPay.h" />
+    <ClInclude Include="traderSale.h" />
     <ClInclude Include="Way.h" />
     <ClInclude Include="Waytwo.h" />
   </ItemGroup>

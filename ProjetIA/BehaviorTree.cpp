@@ -1,5 +1,6 @@
 #include "BehaviorTree.h"
-
+#include "traderPay.h"
+#include "traderSale.h"
 #include "FallBack.h"
 #include "Node.h"
 #include "Sequence.h"
@@ -78,9 +79,46 @@ void NPCBehaviorTree::BuildTree() {
 	AllSubNodes.push_back(Task3);
 }
 
+traderBehaviorTree::traderBehaviorTree()
+{
+}
+
+traderBehaviorTree::traderBehaviorTree(Blackboard* BB)
+{
+}
+
+traderBehaviorTree::~traderBehaviorTree()
+{
+}
+
+void traderBehaviorTree::BuildTree() {
+	BehaviorTree::BuildTree();
+
+	FallBack* FallBack1 = new FallBack(this, nullptr, {});
+	Root->Child = FallBack1;
+
+	Sequence* Sequence1 = new Sequence(this, FallBack1, {});
+	FallBack1->AddChild(Sequence1);
+
+	traderPay* Task1 = new traderPay(this, Sequence1);
+	Sequence1->AddChild(Task1);
+
+	traderSale* Task2 = new traderSale(this, Sequence1);
+	Sequence1->AddChild(Task2);
+
+	AllSubNodes.push_back(FallBack1);
+	AllSubNodes.push_back(Sequence1);
+	AllSubNodes.push_back(Task1);
+	AllSubNodes.push_back(Task2);
+}
+
 
 
 
 NPCBlackBoard::NPCBlackBoard(Character* pnj) {
 	_character = pnj;
+}
+
+traderBlackBoard::traderBlackBoard(trader* pnj)
+{
 }

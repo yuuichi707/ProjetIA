@@ -1,5 +1,6 @@
 #include "NPCMooveTo.h"
 #include <iostream>
+#include <algorithm>
 #include "FlowNode.h"
 
 NPCMooveTo::NPCMooveTo()
@@ -46,7 +47,6 @@ void NPCMooveTo::Tick(float DeltaTime)
 	
 	if (NearlyEqual(PosPNJ.x, Target.x, 10.0f) && NearlyEqual(PosPNJ.y, Target.y, 10.0f))
 	{
-		std::cout << "gdfgh";
 		EndExecute();
 	}
 }

@@ -13,12 +13,14 @@
 #include "Way.h"
 #include "Waytwo.h"
 #include "Background.h"
+#include "trader.h"
 
 int main() {
     Batiment rect("asset/bar.png", -30, 470);
-    Batiment rect2("asset/Boulangerie.png", -62, -25);
+    Batiment rect2("asset/Boulangerie.png", -62, -25); 
     Batiment rect3("asset/commerce.png", 795, -20);
     Batiment rect4("asset/BoulangerieTwo.png", 795, 490);
+    trader rect10(1440, 900, 450, 0);
     Character rect5(1440, 900, 400, 300);
     Way rect7(1440, 900, -30, 100);
     Waytwo rect8(1440, 900, 450, 0);
@@ -33,20 +35,23 @@ int main() {
     Background rect9(1440, 900, 0, 0);
 
     NPCBlackBoard* MyBlackBoard = nullptr;
+    traderBlackBoard* MerchantBlackBoard = nullptr;
     BehaviorTree* MyBT = nullptr;
-    
-    /*float LastScene = TestScene->currentScene;*/
+    Clock BTClock(true);
+    bool BTStart = false;
 
     
 
     // Start the game loop
     while (window.isOpen()) {
+
+      
+
         // Process events
         while (const auto event = window.pollEvent())
         {
             const sf::Event::KeyPressed* currentInputKey = event->getIf<sf::Event::KeyPressed>();
             const sf::Event::MouseButtonPressed* currentInputMouse = event->getIf<sf::Event::MouseButtonPressed>();
-
 
             bool Playclick = Rect1->DetectOnClick(currentInputMouse);
             bool Quitclick = Rect2->DetectOnClick(currentInputMouse);
@@ -62,15 +67,13 @@ int main() {
                 window.close();
         }
 
-
-
-       /* window.clear();
+       window.clear();
         if (TestScene->currentScene == Menu) {
             rect9.draw(window);
             Rect1->draw(window);
             Rect2->draw(window);
-        }*/
-        if (TestScene->currentScene == Menu) {
+        }
+        if (TestScene->currentScene == PLAY) {
             rect8.draw(window);
             rect7.draw(window);
             rect.draw(window);
@@ -78,27 +81,31 @@ int main() {
             rect3.draw(window);
             rect4.draw(window);
             rect5.draw(window);
-
-           /* if (LastScene != TestScene->currentScene) {*/
-                if (MyBT == nullptr) {
-                    MyBlackBoard = new NPCBlackBoard(&rect5);
-                    MyBT = new NPCBehaviorTree(MyBlackBoard);
-                    MyBT->BuildTree();
-                }
-                Clock BTClock = Clock(true);
+            rect10.draw(window);
+            
+            if (MyBT == nullptr) {
+                MyBlackBoard = new NPCBlackBoard(&rect5);
+                MerchantBlackBoard = new traderBlackBoard(&rect10);
+                MyBT = new NPCBehaviorTree(MyBlackBoard);
+                MyBT->BuildTree();
+                BTStart = false;
+            }
+            if (!BTStart && MyBT != nullptr) {
                 MyBT->BeginExecute();
                 BTClock.Restart();
-           /* }*/
-            /*LastScene = TestScene->currentScene;*/
+                BTStart = true;
+            }
+
             float DeltaTime = BTClock.GetElapsedTime();
             if (MyBT != nullptr) {
                 MyBT->Tick(DeltaTime);
             }
-            
-            
         }
-        
+
+       
         // Update the window
         window.display();
     }
+   
+        
 }

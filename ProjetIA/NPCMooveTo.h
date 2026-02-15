@@ -26,6 +26,6 @@ private:
 
 	Character* _character;
 
-	float Speed = 50000;
+	float Speed = 500;
 };
 

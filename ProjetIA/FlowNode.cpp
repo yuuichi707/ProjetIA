@@ -23,7 +23,10 @@ void FlowNode::OnChildEnd(ENodeState ChildResult) {
 }
 
 void FlowNode::BeginExecute() {
-	
+	if (Childs.empty()) {
+		CurrentExecuteChild = nullptr;
+		return;
+	}
 	CurrentExecuteChild = *Childs.begin();
 	if (CurrentExecuteChild != nullptr) {
 		CurrentExecuteChild->BeginExecute();
@@ -31,8 +34,10 @@ void FlowNode::BeginExecute() {
 }
 
 void FlowNode::Tick(float DeltaTime) {
-	CurrentExecuteChild->Tick(DeltaTime);
-	Node::Tick(DeltaTime);
+	if (CurrentExecuteChild != nullptr) {
+		CurrentExecuteChild->Tick(DeltaTime);
+		Node::Tick(DeltaTime);
+	}
 }
 
 void FlowNode::AddChild(Node* Child) {

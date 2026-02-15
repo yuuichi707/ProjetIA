@@ -34,7 +34,6 @@ void NPCQuit::Tick(float DeltaTime)
 {
 	TaskNode::Tick(DeltaTime);
 
-	std::cout << "start to quit";
 	if (PosPNJ.y < Target.y) {
 		PosPNJ.y += Speed * DeltaTime;
 	}
