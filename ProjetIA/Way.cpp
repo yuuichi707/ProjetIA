@@ -5,7 +5,7 @@
 #include "Way.h"
 Way::Way(float width, float height, float x, float y)
 {
-    rectangle = sf::RectangleShape({ 1480.f, 420.f });
+    rectangle = sf::RectangleShape({ 1500.f, 800.f });
     texture = sf::Texture("asset/Way.png");
     rectangle.setTexture(&texture);
     setPosition(x, y);

@@ -11,7 +11,6 @@ enum SceneState
 {
     Menu,
     PLAY,
-    Pause
 };
 
 class Scene

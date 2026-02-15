@@ -1,82 +1,78 @@
 #include <SFML/Graphics.hpp>
-// #include <optional>
-// #include "Scene.h"
-#include "Batiment1.h"
-#include "Batiment2.h"
-#include "Batiment3.h"
-#include "Batiment4.h"
+#include <optional>
+ #include "Scene.h"
 #include "Bouton.h"
 #include "Character.h"
-#include "Character2.h"
 #include "Play.h"
 #include "Quit.h"
 #include "Way.h"
-
+#include "Waytwo.h"
+#include "Background.h"
+#include "trader.h"
+#include "Batiment.h"
 
 
 int main() {
- Batiment1 rect(1440, 900, -30, 370);
- Batiment2 rect2(1440, 900, -62, -25);
- Batiment3 rect3(1440, 900, 795, -20);
- Batiment4 rect4(1440, 900, 755, 420);
+ Batiment rect("asset/bar.png", -30, 470);
+ Batiment rect2("asset/Boulangerie.png", -62, -25);
+ Batiment rect3("asset/commerce.png", 795, -20);
+ Batiment rect4("asset/BoulangerieTwo.png", 795, 490);
  Character rect5(1440, 900, 400, 300);
- //Character2 rect6(500, 450, 300, 0);
- //Way rect(1440, 900, -30, 200);
-     // Bouton* Rect1 = new Play(1440, 900, 1440 / 2, 900 / 2);
-     // Bouton* Rect2= new Quit(1440, 900, 1440 / 2 + 200, 900 / 2);
+ Way rect7(1440, 900, -30, 0);
+ Waytwo rect8(1440, 900, 385, 0);
+ trader rect10(1440, 900, 450, 0);
+ Bouton* Rect1 = new Play(1440, 900, 500, 900 / 2);
+ Bouton* Rect2= new Quit(1440, 900, 500 + 260, 900 / 2);
 
 
-    // Create the main window
  sf::RenderWindow window(sf::VideoMode({ 1440, 900 }), "ANIME_WORLD");
 
 
-     // Scene* TestScene = new Scene();
-    // Start the game loop
-    while (window.isOpen()) {
-         // Process events
-        while (const auto event = window.pollEvent()) {
-         //      Close window: exit
-         if (event->is<sf::Event::Closed>())
-          window.close();
-        }
-         //     //regarde lorsque la souris ou le clavier est cliquer
-         //     const sf::Event::KeyPressed* currentInputKey = event->getIf<sf::Event::KeyPressed>();
-         //     const sf::Event::MouseButtonPressed* currentInputMouse = event->getIf<sf::Event::MouseButtonPressed>();
-         //
-         //      bool Playclick = Rect1->DetectOnClick(currentInputMouse);
-         //      bool Quitclick = Rect2->DetectOnClick(currentInputMouse);
-         //       if (Playclick){
-         //          Rect1->OnClick(new PlayParams(TestScene));
-         //       }
-         //      if (Quitclick){
-         //          Rect2->OnClick(new QuitParams(&window));
-         //      }
+ Scene* TestScene = new Scene();
 
-             // Clear screen
-     window.clear();
+ Background rect9 (1440, 900, 0, 0);
 
-              //   if (TestScene->currentScene == Menu) {
-              //     Rect1->setColor(sf::Color::Red);
-              //     Rect2->setColor(sf::Color::Green);
-              //     Rect1->draw(window);
-              // /   Rect2->draw(window);
-              // }
-                  // if (TestScene->currentScene == PLAY) {
+ while (window.isOpen()) {
+
+  while (const auto event = window.pollEvent()) {
+   const sf::Event::KeyPressed* currentInputKey = event->getIf<sf::Event::KeyPressed>();
+   const sf::Event::MouseButtonPressed* currentInputMouse = event->getIf<sf::Event::MouseButtonPressed>();
 
 
-     rect.draw(window);
-     rect2.draw(window);
-     rect3.draw(window);
-     rect4.draw(window);
-     rect5.draw(window);
-     //rect6.draw(window);
-     //rect.draw(window);
+   bool Playclick = Rect1->DetectOnClick(currentInputMouse);
+   bool Quitclick = Rect2->DetectOnClick(currentInputMouse);
+   if (Playclick){
+    Rect1->OnClick(new PlayParams(TestScene));
+   }
+   if (Quitclick){
+    Rect2->OnClick(new QuitParams(&window));
+   }
+   if (event->is<sf::Event::Closed>())
+    window.close();
+  }
 
-             // }
+  window.clear();
+  if (TestScene->currentScene == Menu) {
+   rect9.draw(window);
+   Rect1->draw(window);
+   Rect2->draw(window);
+  }
+  if (TestScene->currentScene == PLAY) {
+   rect8.draw(window);
+   rect7.draw(window);
+   rect.draw(window);
+   rect2.draw(window);
+   rect3.draw(window);
+   rect4.draw(window);
+   rect10.draw(window);
+   rect5.draw(window);
 
 
-            // Update the window
-     window.display();
+  }
 
-    }
+
+
+  window.display();
+
+ }
 }
